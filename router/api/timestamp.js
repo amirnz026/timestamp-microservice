@@ -33,6 +33,5 @@ router.get('/:date', (req, res) => {
     });
   }
 });
-// var date = new Date(unix_timestamp);
 
 module.exports = router;
