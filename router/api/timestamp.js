@@ -12,7 +12,7 @@ router.get('/:date', (req, res) => {
   let date_string = req.params.date;
 
   const unixRegex = /\b\d{13}\b/;
-  const dateRegex = /\b\d{4}-\d{2}\-\d{2}\b/;
+  const dateRegex = /(\b\d{4}-\d{2}\-\d{2}\b|\b\d{2}\s\w+\s\d{4})/;
 
   const unixIsValid = String(date_string).match(unixRegex);
   const dateIsValid = String(date_string).match(dateRegex);
